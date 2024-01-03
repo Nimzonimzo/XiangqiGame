@@ -33,10 +33,11 @@ public class ChessboardController {
                 // Ajout d'une bordure
                 square.setStroke(Color.BLACK);
 
-                // Ajout de la rivière comme un grand rectangle bleu
+                // Ajout de la rivière comme un unique rectangle bleu
                 if (row == numRows / 2) {
                     square.setFill(Color.LIGHTBLUE);
                     square.setStroke(Color.BLACK); // Ajoute une bordure à la rivière
+                    GridPane.setColumnSpan(square, numColumns); // Étend le rectangle sur toute la largeur
                 }
 
                 chessboardGrid.add(square, col, row);
