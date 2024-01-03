@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Préparation des pieces">
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Images des pieces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +47,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\tomfe\Desktop\XiangqiGame\src\images" />
       <recent name="C:\Users\tomfe\Desktop\XiangqiGame\src\view" />
     </key>
   </component>
@@ -109,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704300763178</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Images des pieces">
+      <option name="closed" value="true" />
+      <created>1704321474124</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704321474124</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -118,7 +127,8 @@
     <MESSAGE value="Travail Interface Echiquier mis en place" />
     <MESSAGE value="Travail Interface Echiquier mis en place avec riviere" />
     <MESSAGE value="Préparation des pieces" />
-    <option name="LAST_COMMIT_MESSAGE" value="Préparation des pieces" />
+    <MESSAGE value="Images des pieces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Images des pieces" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/XiangqiGame$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1704217739531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
