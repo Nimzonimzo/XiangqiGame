@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Travail Interface Echiquier mis en place avec riviere">
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Préparation des pieces">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ChessboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChessboardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704222475530</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Préparation des pieces">
+      <option name="closed" value="true" />
+      <created>1704300763178</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704300763178</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -110,7 +117,8 @@
     <MESSAGE value="Travail Interface" />
     <MESSAGE value="Travail Interface Echiquier mis en place" />
     <MESSAGE value="Travail Interface Echiquier mis en place avec riviere" />
-    <option name="LAST_COMMIT_MESSAGE" value="Travail Interface Echiquier mis en place avec riviere" />
+    <MESSAGE value="Préparation des pieces" />
+    <option name="LAST_COMMIT_MESSAGE" value="Préparation des pieces" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/XiangqiGame$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1704217739531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
