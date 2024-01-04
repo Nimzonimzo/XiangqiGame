@@ -1,6 +1,5 @@
 package main;
 
-import controller.ChessboardController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,13 +10,8 @@ public class XiangqiGUI extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Chessboard.fxml"));
-        Parent root = loader.load();
-
-        ChessboardController controller = loader.getController();
-        controller.initializeChessboard(); // Initialise le plateau
-
-        primaryStage.setScene(new Scene(root, 400, 400));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/Chessboard.fxml"));
+        primaryStage.setScene(new Scene(root, 400, 400)); // Ajoutez la taille que vous souhaitez
         primaryStage.setTitle("Xiangqi Game");
         primaryStage.show();
     }

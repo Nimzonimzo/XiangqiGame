@@ -1,5 +1,7 @@
 package model;
 
+import javafx.scene.image.Image;
+
 public class General extends ChessPiece {
     public General(String imagePath) {
         super(imagePath, "General");
@@ -7,8 +9,7 @@ public class General extends ChessPiece {
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Logique de mouvement spécifique pour le Général
-        // Retournez true si le mouvement est valide, sinon false
-        return false;
+        // Logique pour valider le déplacement du General
+        return true;
     }
 }

@@ -1,5 +1,7 @@
 package model;
 
+import javafx.scene.image.Image;
+
 public class Advisor extends ChessPiece {
     public Advisor(String imagePath) {
         super(imagePath, "Advisor");
@@ -7,8 +9,7 @@ public class Advisor extends ChessPiece {
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Logique de mouvement spécifique pour l'Advisor
-        // Retournez true si le mouvement est valide, sinon false
-        return false;
+        // Logique pour valider le déplacement de l'Advisor
+        return true;
     }
 }

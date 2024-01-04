@@ -1,21 +1,29 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import model.ChessPiece;
+import model.Chessboard;
 
 public class ChessboardController {
 
     @FXML
     private GridPane chessboardGrid;
 
+    private Chessboard chessboard;
+
     @FXML
     private void initialize() {
+        chessboard = new Chessboard();
         initializeChessboard();
+        placePiecesOnChessboard();
     }
 
-    public void initializeChessboard() {
+    private void initializeChessboard() {
         int numColumns = 8;
         int numRows = 9; // Inclut la rivière
 
@@ -41,6 +49,20 @@ public class ChessboardController {
                 }
 
                 chessboardGrid.add(square, col, row);
+            }
+        }
+    }
+
+    private void placePiecesOnChessboard() {
+        for (int row = 0; row < chessboard.getBoard().length; row++) {
+            for (int col = 0; col < chessboard.getBoard()[0].length; col++) {
+                ChessPiece piece = chessboard.getPiece(row, col);
+                if (piece != null) {
+                    String imagePath = "/images/" + piece.getImagePath(); // Assurez-vous du chemin correct
+                    Image pieceImage = new Image(getClass().getResourceAsStream(imagePath));
+                    ImageView imageView = new ImageView(pieceImage);
+                    chessboardGrid.add(imageView, col, row);
+                }
             }
         }
     }
