@@ -23,7 +23,7 @@ public class ChessboardController {
             for (int col = 0; col < numColumns; col++) {
                 Rectangle square = new Rectangle(50, 50);
 
-                // Couleur alternée pour les cases
+                // Couleur alternée pour les cases à modifier plus tard
                 if ((row + col) % 2 == 0) {
                     square.setFill(Color.WHITE);
                 } else {
