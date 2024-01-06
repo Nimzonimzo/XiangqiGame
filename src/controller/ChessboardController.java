@@ -1,6 +1,7 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.geometry.VPos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -51,5 +52,8 @@ public class ChessboardController {
     private void displayImage() {
         ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("/images/GeneralRed.png")));
         chessboardGrid.add(imageView, 0, 0);
+
+        // Réglez la position de l'image pour la placer devant la case
+        GridPane.setValignment(imageView, VPos.TOP);
     }
 }
