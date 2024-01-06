@@ -1,6 +1,8 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -13,6 +15,7 @@ public class ChessboardController {
     @FXML
     private void initialize() {
         initializeChessboard();
+        displayImage(); // Ajout de cette ligne pour afficher l'image de test
     }
 
     public void initializeChessboard() {
@@ -43,5 +46,10 @@ public class ChessboardController {
                 chessboardGrid.add(square, col, row);
             }
         }
+    }
+
+    private void displayImage() {
+        ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("/images/GeneralRed.png")));
+        chessboardGrid.add(imageView, 0, 0);
     }
 }

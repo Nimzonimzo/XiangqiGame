@@ -1,8 +1,8 @@
 package model;
 
 public class General extends ChessPiece {
-    public General(String imagePath) {
-        super(imagePath, "General");
+    public General() {
+        super("/images/GeneralRed.png", "General");
     }
 
     @Override

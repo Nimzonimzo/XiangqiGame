@@ -20,4 +20,8 @@ public abstract class ChessPiece {
     }
 
     public abstract boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol);
+
+    // Ajout d'un constructeur par défaut pour faciliter l'initialisation dans Chessboard
+    public ChessPiece() {
+    }
 }
