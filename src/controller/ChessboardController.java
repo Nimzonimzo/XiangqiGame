@@ -1,10 +1,12 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.geometry.VPos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -44,16 +46,26 @@ public class ChessboardController {
                     GridPane.setColumnSpan(square, numColumns); // Étend le rectangle sur toute la largeur
                 }
 
-                chessboardGrid.add(square, col, row);
+                StackPane squarePane = new StackPane(square);
+
+                // Désactiver les interactions de la souris avec le StackPane
+                squarePane.setMouseTransparent(true);
+
+                chessboardGrid.add(squarePane, col, row);
             }
         }
     }
 
     private void displayImage() {
         ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("/images/GeneralRed.png")));
-        chessboardGrid.add(imageView, 0, 0);
+        StackPane imagePane = new StackPane(imageView);
 
         // Réglez la position de l'image pour la placer devant la case
-        GridPane.setValignment(imageView, VPos.TOP);
+        GridPane.setValignment(imagePane, VPos.TOP);
+
+        // Réglez la position de l'image à la bordure supérieure de la case mais sans réussite
+        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
+
+        chessboardGrid.add(imagePane, 0, 0);
     }
 }
