@@ -7,6 +7,10 @@
     <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="La piece est presente mais mal places">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ChessboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChessboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/XiangqiGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/XiangqiGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Chessboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Chessboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Elephant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Elephant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/Chessboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Chessboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
