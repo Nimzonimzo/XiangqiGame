@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="2 piece presente sur le cote. A maj pour toutes les pieces rouge">
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Piece rouge presente sur la premiere ligne">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/ChessboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChessboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Advisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Advisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Cannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Chariot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Chariot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Chessboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Chessboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Soldier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Soldier.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +25,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Nimzonimzo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nimzonimzo&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -179,7 +173,39 @@
       <option name="project" value="LOCAL" />
       <updated>1704721978812</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Toute les pieces rouge presente faut les mettre position de base mtn">
+      <option name="closed" value="true" />
+      <created>1704723548507</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1704723548507</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Toute les pieces rouge presente faut les mettre position de base mtn">
+      <option name="closed" value="true" />
+      <created>1704723556144</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1704723556144</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Piece rouge presente sur la premiere ligne">
+      <option name="closed" value="true" />
+      <created>1704723637187</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1704723637187</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Piece rouge presente sur la premiere ligne">
+      <option name="closed" value="true" />
+      <created>1704723650364</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1704723650364</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -192,7 +218,10 @@
     <MESSAGE value="De retour a du fonctionnel" />
     <MESSAGE value="La piece est presente mais mal places" />
     <MESSAGE value="2 piece presente sur le cote. A maj pour toutes les pieces rouge" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 piece presente sur le cote. A maj pour toutes les pieces rouge" />
+    <MESSAGE value="Toute les pieces rouge presente faut les mettre position de base mtn" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/nouvelle_branche' into nouvelle_branche&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/controller/ChessboardController.java&#10;#&#9;src/model/Chessboard.java" />
+    <MESSAGE value="Piece rouge presente sur la premiere ligne" />
+    <option name="LAST_COMMIT_MESSAGE" value="Piece rouge presente sur la premiere ligne" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/XiangqiGame$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1704217739531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

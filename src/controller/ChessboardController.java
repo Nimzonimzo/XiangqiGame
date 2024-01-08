@@ -39,7 +39,7 @@ public class ChessboardController {
                 // Ajout d'une bordure
                 square.setStroke(Color.BLACK);
 
-                // Ajout de la rivière comme un unique rectangle bleu mais la en carré
+                // Ajout de la rivière comme un unique rectangle bleu mais là en carré
                 if (row == numRows / 2) {
                     square.setFill(Color.LIGHTBLUE);
                     square.setStroke(Color.BLACK); // Ajoute une bordure à la rivière
@@ -57,70 +57,86 @@ public class ChessboardController {
     }
 
     private void displayImage() {
-        // Affiche l'image du General Rouge
+        // Positionne les pièces dans la configuration de départ du camp rouge
+        // Chariots
+        ImageView chariotImageView1 = new ImageView(new Image(getClass().getResourceAsStream("/images/ChariotRed.png")));
+        StackPane chariotImagePane1 = new StackPane(chariotImageView1);
+        chariotImageView1.setFitWidth(50);
+        chariotImageView1.setFitHeight(50);
+        chessboardGrid.add(chariotImagePane1, 0, 0);
+
+        ImageView chariotImageView2 = new ImageView(new Image(getClass().getResourceAsStream("/images/ChariotRed.png")));
+        StackPane chariotImagePane2 = new StackPane(chariotImageView2);
+        chariotImageView2.setFitWidth(50);
+        chariotImageView2.setFitHeight(50);
+        chessboardGrid.add(chariotImagePane2, 7, 0);
+
+        // Horses
+        ImageView horseImageView1 = new ImageView(new Image(getClass().getResourceAsStream("/images/HorseRed.png")));
+        StackPane horseImagePane1 = new StackPane(horseImageView1);
+        horseImageView1.setFitWidth(50);
+        horseImageView1.setFitHeight(50);
+        chessboardGrid.add(horseImagePane1, 1, 0);
+
+        ImageView horseImageView2 = new ImageView(new Image(getClass().getResourceAsStream("/images/HorseRed.png")));
+        StackPane horseImagePane2 = new StackPane(horseImageView2);
+        horseImageView2.setFitWidth(50);
+        horseImageView2.setFitHeight(50);
+        chessboardGrid.add(horseImagePane2, 6, 0);
+
+        // Elephants
+        ImageView elephantImageView1 = new ImageView(new Image(getClass().getResourceAsStream("/images/ElephantRed.png")));
+        StackPane elephantImagePane1 = new StackPane(elephantImageView1);
+        elephantImageView1.setFitWidth(50);
+        elephantImageView1.setFitHeight(50);
+        chessboardGrid.add(elephantImagePane1, 2, 0);
+
+        ImageView elephantImageView2 = new ImageView(new Image(getClass().getResourceAsStream("/images/ElephantRed.png")));
+        StackPane elephantImagePane2 = new StackPane(elephantImageView2);
+        elephantImageView2.setFitWidth(50);
+        elephantImageView2.setFitHeight(50);
+        chessboardGrid.add(elephantImagePane2, 5, 0);
+
+        // Advisors
+        ImageView advisorImageView1 = new ImageView(new Image(getClass().getResourceAsStream("/images/AdvisorRed.png")));
+        StackPane advisorImagePane1 = new StackPane(advisorImageView1);
+        advisorImageView1.setFitWidth(50);
+        advisorImageView1.setFitHeight(50);
+        chessboardGrid.add(advisorImagePane1, 3, 0);
+
+        ImageView advisorImageView2 = new ImageView(new Image(getClass().getResourceAsStream("/images/AdvisorRed.png")));
+        StackPane advisorImagePane2 = new StackPane(advisorImageView2);
+        advisorImageView2.setFitWidth(50);
+        advisorImageView2.setFitHeight(50);
+        chessboardGrid.add(advisorImagePane2, 4, 0);
+
+        // General
         ImageView generalImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/GeneralRed.png")));
         StackPane generalImagePane = new StackPane(generalImageView);
-        StackPane outerGeneralPane = new StackPane(generalImagePane);
-        generalImageView.setFitWidth(50); // Ajuste la largeur de l'image
-        generalImageView.setFitHeight(50); // Ajuste la hauteur de l'image
-        generalImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
+        generalImageView.setFitWidth(50);
+        generalImageView.setFitHeight(50);
+        chessboardGrid.add(generalImagePane, 3, 1);
 
-        // Affiche l'image de l'Éléphant Rouge (nouvelle pièce)
-        ImageView elephantImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/ElephantRed.png")));
-        StackPane elephantImagePane = new StackPane(elephantImageView);
-        StackPane outerElephantPane = new StackPane(elephantImagePane);
-        elephantImageView.setFitWidth(50); // Ajuste la largeur de l'image
-        elephantImageView.setFitHeight(50); // Ajuste la hauteur de l'image
-        elephantImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
+        // Cannons
+        ImageView cannonImageView1 = new ImageView(new Image(getClass().getResourceAsStream("/images/CannonRed.png")));
+        StackPane cannonImagePane1 = new StackPane(cannonImageView1);
+        cannonImageView1.setFitWidth(50);
+        cannonImageView1.setFitHeight(50);
+        chessboardGrid.add(cannonImagePane1, 1, 2);
 
-        // Affiche l'image du Advisor Rouge
-        ImageView advisorImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/AdvisorRed.png")));
-        StackPane advisorImagePane = new StackPane(advisorImageView);
-        StackPane outerAdvisorPane = new StackPane(advisorImagePane);
-        advisorImageView.setFitWidth(50); // Ajuste la largeur de l'image
-        advisorImageView.setFitHeight(50); // Ajuste la hauteur de l'image
-        advisorImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
+        ImageView cannonImageView2 = new ImageView(new Image(getClass().getResourceAsStream("/images/CannonRed.png")));
+        StackPane cannonImagePane2 = new StackPane(cannonImageView2);
+        cannonImageView2.setFitWidth(50);
+        cannonImageView2.setFitHeight(50);
+        chessboardGrid.add(cannonImagePane2, 7, 2);
 
-// Affiche l'image du Soldier Rouge
-        ImageView soldierImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/SoldierRed.png")));
-        StackPane soldierImagePane = new StackPane(soldierImageView);
-        StackPane outerSoldierPane = new StackPane(soldierImagePane);
-        soldierImageView.setFitWidth(50); // Ajuste la largeur de l'image
-        soldierImageView.setFitHeight(50); // Ajuste la hauteur de l'image
-        soldierImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
-
-// Affiche l'image du Cannon Rouge
-        ImageView cannonImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/CannonRed.png")));
-        StackPane cannonImagePane = new StackPane(cannonImageView);
-        StackPane outerCannonPane = new StackPane(cannonImagePane);
-        cannonImageView.setFitWidth(50); // Ajuste la largeur de l'image
-        cannonImageView.setFitHeight(50); // Ajuste la hauteur de l'image
-        cannonImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
-
-// Affiche l'image du Chariot Rouge
-        ImageView chariotImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/ChariotRed.png")));
-        StackPane chariotImagePane = new StackPane(chariotImageView);
-        StackPane outerChariotPane = new StackPane(chariotImagePane);
-        chariotImageView.setFitWidth(50); // Ajuste la largeur de l'image
-        chariotImageView.setFitHeight(50); // Ajuste la hauteur de l'image
-        chariotImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
-
-// Affiche l'image du Horse Rouge
-        ImageView horseImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/HorseRed.png")));
-        StackPane horseImagePane = new StackPane(horseImageView);
-        StackPane outerHorsePane = new StackPane(horseImagePane);
-        horseImageView.setFitWidth(50); // Ajuste la largeur de l'image
-        horseImageView.setFitHeight(50); // Ajuste la hauteur de l'image
-        horseImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
-
-
-
-        chessboardGrid.add(outerGeneralPane, 0, 0); // Affiche le General Rouge
-        chessboardGrid.add(outerElephantPane, 1, 0); // Affiche l'Éléphant Rouge (dans la deuxième colonne)
-        chessboardGrid.add(outerCannonPane, 2, 0);
-        chessboardGrid.add(outerChariotPane, 3, 0);
-        chessboardGrid.add(outerHorsePane, 4, 0);
-        chessboardGrid.add(outerSoldierPane, 5, 0);
-        chessboardGrid.add(outerAdvisorPane, 6, 0);
+        // Soldiers
+        for (int col = 0; col < 9; col += 2) {
+            ImageView soldierImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/SoldierRed.png")));
+            StackPane soldierImagePane = new StackPane(soldierImageView);
+            soldierImageView.setFitWidth(50);
+            soldierImageView.setFitHeight(50);
+            chessboardGrid.add(soldierImagePane, col, 3);
+        }
     }
 }
