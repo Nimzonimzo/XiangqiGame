@@ -11,4 +11,3 @@
     <GridPane fx:id="chessboardGrid" alignment="CENTER" hgap="1" vgap="1"/>
 
 </GridPane>
-
