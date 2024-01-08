@@ -57,15 +57,23 @@ public class ChessboardController {
     }
 
     private void displayImage() {
-        ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("/images/GeneralRed.png")));
-        StackPane imagePane = new StackPane(imageView);
+        // Affiche l'image du General Rouge
+        ImageView generalImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/GeneralRed.png")));
+        StackPane generalImagePane = new StackPane(generalImageView);
+        StackPane outerGeneralPane = new StackPane(generalImagePane);
+        generalImageView.setFitWidth(50); // Ajuste la largeur de l'image
+        generalImageView.setFitHeight(50); // Ajuste la hauteur de l'image
+        generalImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
 
-        // Réglez la position de l'image pour la placer devant la case
-        GridPane.setValignment(imagePane, VPos.TOP);
+        // Affiche l'image de l'Éléphant Rouge (nouvelle pièce)
+        ImageView elephantImageView = new ImageView(new Image(getClass().getResourceAsStream("/images/ElephantRed.png")));
+        StackPane elephantImagePane = new StackPane(elephantImageView);
+        StackPane outerElephantPane = new StackPane(elephantImagePane);
+        elephantImageView.setFitWidth(50); // Ajuste la largeur de l'image
+        elephantImageView.setFitHeight(50); // Ajuste la hauteur de l'image
+        elephantImagePane.setTranslateX(25); // Déplace l'image vers le bord droit
 
-        // Réglez la position de l'image à la bordure supérieure de la case mais sans réussite
-        StackPane.setAlignment(imageView, Pos.TOP_CENTER);
-
-        chessboardGrid.add(imagePane, 0, 0);
+        chessboardGrid.add(outerGeneralPane, 0, 0); // Affiche le General Rouge
+        chessboardGrid.add(outerElephantPane, 1, 0); // Affiche l'Éléphant Rouge (dans la deuxième colonne)
     }
 }
