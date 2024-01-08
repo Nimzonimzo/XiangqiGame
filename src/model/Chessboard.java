@@ -16,6 +16,11 @@ public class Chessboard {
     private void placeRedPieces() {
         board[0][4] = new General();
         board[0][1] = new Elephant();
+        board[0][2] = new Cannon();
+        board[0][3] = new Chariot();
+        board[0][5] = new Horse();
+        board[0][6] = new Soldier();
+        board[0][7] = new Advisor();
         // Ajoutez d'autres pièces rouges au besoin
     }
 
