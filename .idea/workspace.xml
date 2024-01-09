@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Toutes les pieces rouge presentes faut reussir a les centrer mtn">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Advisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Advisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Cannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Chariot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Chariot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Chessboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Chessboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Elephant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Elephant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/General.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Soldier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Soldier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Chessboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Chessboard.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Toutes les pieces presentes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -222,7 +210,31 @@
       <option name="project" value="LOCAL" />
       <updated>1704726726410</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Toutes les pieces rouge presentes">
+      <option name="closed" value="true" />
+      <created>1704737989826</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1704737989826</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Toutes les pieces rouge presentes">
+      <option name="closed" value="true" />
+      <created>1704738034038</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1704738034038</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Toutes les pieces presentes">
+      <option name="closed" value="true" />
+      <created>1704811636369</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1704811636369</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -239,7 +251,9 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/nouvelle_branche' into nouvelle_branche&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/controller/ChessboardController.java&#10;#&#9;src/model/Chessboard.java" />
     <MESSAGE value="Piece rouge presente sur la premiere ligne" />
     <MESSAGE value="Toutes les pieces rouge presentes faut reussir a les centrer mtn" />
-    <option name="LAST_COMMIT_MESSAGE" value="Toutes les pieces rouge presentes faut reussir a les centrer mtn" />
+    <MESSAGE value="Toutes les pieces rouge presentes" />
+    <MESSAGE value="Toutes les pieces presentes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toutes les pieces presentes" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/XiangqiGame$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1704217739531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

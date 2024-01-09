@@ -18,7 +18,8 @@ public class ChessboardController {
     @FXML
     private void initialize() {
         initializeChessboard();
-        displayImage(); // Ajout de cette ligne pour afficher l'image de test
+        displayImage();
+        displayBlackPieces();
     }
 
     public void initializeChessboard() {
@@ -138,5 +139,89 @@ public class ChessboardController {
             soldierImageView.setFitHeight(50);
             chessboardGrid.add(soldierImagePane, col, 3);
         }
+    }
+    private void displayBlackPieces() {
+        // Positionne les pièces dans la configuration de départ du camp noir
+        // Chariots
+        ImageView chariotImageView1 = new ImageView(new Image(getClass().getResourceAsStream("/images/ChariotBlack.png")));
+        StackPane chariotImagePane1 = new StackPane(chariotImageView1);
+        chariotImageView1.setFitWidth(50);
+        chariotImageView1.setFitHeight(50);
+        chessboardGrid.add(chariotImagePane1, 0, 9);
+
+        ImageView chariotImageView2 = new ImageView(new Image(getClass().getResourceAsStream("/images/ChariotBlack.png")));
+        StackPane chariotImagePane2 = new StackPane(chariotImageView2);
+        chariotImageView2.setFitWidth(50);
+        chariotImageView2.setFitHeight(50);
+        chessboardGrid.add(chariotImagePane2, 7, 9);
+
+        // Horses
+        ImageView horseImageView3 = new ImageView(new Image(getClass().getResourceAsStream("/images/HorseBlack.png")));
+        StackPane horseImagePane3 = new StackPane(horseImageView3);
+        horseImageView3.setFitWidth(50);
+        horseImageView3.setFitHeight(50);
+        chessboardGrid.add(horseImagePane3, 1, 9);
+
+        ImageView horseImageView4 = new ImageView(new Image(getClass().getResourceAsStream("/images/HorseBlack.png")));
+        StackPane horseImagePane4 = new StackPane(horseImageView4);
+        horseImageView4.setFitWidth(50);
+        horseImageView4.setFitHeight(50);
+        chessboardGrid.add(horseImagePane4, 6, 9);
+
+        // Elephants
+        ImageView elephantImageView3 = new ImageView(new Image(getClass().getResourceAsStream("/images/ElephantBlack.png")));
+        StackPane elephantImagePane3 = new StackPane(elephantImageView3);
+        elephantImageView3.setFitWidth(50);
+        elephantImageView3.setFitHeight(50);
+        chessboardGrid.add(elephantImagePane3, 2, 9);
+
+        ImageView elephantImageView4 = new ImageView(new Image(getClass().getResourceAsStream("/images/ElephantBlack.png")));
+        StackPane elephantImagePane4 = new StackPane(elephantImageView4);
+        elephantImageView4.setFitWidth(50);
+        elephantImageView4.setFitHeight(50);
+        chessboardGrid.add(elephantImagePane4, 5, 9);
+
+        // Advisors
+        ImageView advisorImageView3 = new ImageView(new Image(getClass().getResourceAsStream("/images/AdvisorBlack.png")));
+        StackPane advisorImagePane3 = new StackPane(advisorImageView3);
+        advisorImageView3.setFitWidth(50);
+        advisorImageView3.setFitHeight(50);
+        chessboardGrid.add(advisorImagePane3, 3, 9);
+
+        ImageView advisorImageView4 = new ImageView(new Image(getClass().getResourceAsStream("/images/AdvisorBlack.png")));
+        StackPane advisorImagePane4 = new StackPane(advisorImageView4);
+        advisorImageView4.setFitWidth(50);
+        advisorImageView4.setFitHeight(50);
+        chessboardGrid.add(advisorImagePane4, 4, 9);
+
+        // General
+        ImageView generalImageView2 = new ImageView(new Image(getClass().getResourceAsStream("/images/GeneralBlack.png")));
+        StackPane generalImagePane2 = new StackPane(generalImageView2);
+        generalImageView2.setFitWidth(50);
+        generalImageView2.setFitHeight(50);
+        chessboardGrid.add(generalImagePane2, 3, 8);
+
+        // Cannons
+        ImageView cannonImageView3 = new ImageView(new Image(getClass().getResourceAsStream("/images/CannonBlack.png")));
+        StackPane cannonImagePane3 = new StackPane(cannonImageView3);
+        cannonImageView3.setFitWidth(50);
+        cannonImageView3.setFitHeight(50);
+        chessboardGrid.add(cannonImagePane3, 1, 7);
+
+        ImageView cannonImageView4 = new ImageView(new Image(getClass().getResourceAsStream("/images/CannonBlack.png")));
+        StackPane cannonImagePane4 = new StackPane(cannonImageView4);
+        cannonImageView4.setFitWidth(50);
+        cannonImageView4.setFitHeight(50);
+        chessboardGrid.add(cannonImagePane4, 7, 7);
+
+        // Soldiers
+        for (int col = 0; col < 9; col += 2) {
+            ImageView soldierImageView2 = new ImageView(new Image(getClass().getResourceAsStream("/images/SoldierBlack.png")));
+            StackPane soldierImagePane2 = new StackPane(soldierImageView2);
+            soldierImageView2.setFitWidth(50);
+            soldierImageView2.setFitHeight(50);
+            chessboardGrid.add(soldierImagePane2, col, 6);
+        }
+
     }
 }
