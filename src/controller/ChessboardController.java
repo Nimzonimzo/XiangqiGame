@@ -84,30 +84,37 @@ public class ChessboardController {
     private void displayBlackPieces() {
         // Positionne les pièces dans la configuration de départ du camp noir
         // Chariots
-        placePiece("/images/ChariotBlack.png", 0, 8);
-        placePiece("/images/ChariotBlack.png", 7, 8);
+        placePiece("/images/ChariotBlack.png", 0, 9);
+        placePiece("/images/ChariotBlack.png", 7, 9);
 
         // Horses
-        placePiece("/images/HorseBlack.png", 1, 8);
-        placePiece("/images/HorseBlack.png", 6, 8);
+        placePiece("/images/HorseBlack.png", 1, 9);
+        placePiece("/images/HorseBlack.png", 6, 9);
 
         // Elephants
-        placePiece("/images/ElephantBlack.png", 2, 8);
-        placePiece("/images/ElephantBlack.png", 5, 8);
+        placePiece("/images/ElephantBlack.png", 2, 9);
+        placePiece("/images/ElephantBlack.png", 5, 9);
 
         // Advisors
-        placePiece("/images/AdvisorBlack.png", 3, 8);
-        placePiece("/images/AdvisorBlack.png", 4, 8);
+        placePiece("/images/AdvisorBlack.png", 3, 9);
+        placePiece("/images/AdvisorBlack.png", 4, 9);
 
         // General
-        placePiece("/images/GeneralBlack.png", 3, 7);
+        placePiece("/images/GeneralBlack.png", 4, 8);
     }
+
+
 
     private void placePiece(String imagePath, int col, int row) {
         ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream(imagePath)));
         StackPane piecePane = new StackPane(imageView);
         imageView.setFitWidth(50);
         imageView.setFitHeight(50);
-        piecesGrid.add(piecePane, col, row); // Utiliser le nouveau GridPane pour les pièces
+
+        // Ajustez les coordonnées pour placer les pièces dans les coins supérieurs gauche
+        piecesGrid.add(piecePane, col, row);
+        GridPane.setRowIndex(piecePane, row);
+        GridPane.setColumnIndex(piecePane, col);
     }
+
 }

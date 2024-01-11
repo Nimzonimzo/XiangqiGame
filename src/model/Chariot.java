@@ -11,13 +11,17 @@ public class Chariot extends ChessPiece {
 
     // Ajoutez ce constructeur par défaut
     public Chariot() {
-        super(); // Vous pouvez ajouter des valeurs par défaut si nécessaire
+        super("/images/ChariotRed.png", "Chariot");
     }
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Implémentez la logique des mouvements valides pour le chariot
-        // (vous devrez ajuster cela en fonction des règles du Xiangqi)
-        return true;
+        // Mouvement valide pour le Chariot : se déplace en ligne droite
+        if (sourceRow == targetRow || sourceCol == targetCol) {
+            // Déplacement en ligne droite
+            return true;
+        }
+
+        return false;
     }
 }

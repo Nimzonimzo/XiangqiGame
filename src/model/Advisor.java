@@ -11,13 +11,15 @@ public class Advisor extends ChessPiece {
 
     // Ajoutez ce constructeur par défaut
     public Advisor() {
-        super(); // Vous pouvez ajouter des valeurs par défaut si nécessaire
+        super("/images/AdvisorRed.png", "Advisor");
     }
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Implémentez la logique des mouvements valides pour l'advisor
-        // (vous devrez ajuster cela en fonction des règles du Xiangqi)
-        return true;
+        // Mouvement valide pour l'Advisor : déplacement en diagonale dans la zone du palais
+        int rowDiff = Math.abs(targetRow - sourceRow);
+        int colDiff = Math.abs(targetCol - sourceCol);
+
+        return (rowDiff == 1 && colDiff == 1); // Déplacement en diagonale d'une case
     }
 }
