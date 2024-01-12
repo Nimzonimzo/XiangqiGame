@@ -14,7 +14,7 @@ public class ChessboardController {
     private GridPane chessboardGrid;
 
     @FXML
-    private GridPane piecesGrid; // Nouveau GridPane pour les pièces
+    private GridPane piecesGrid;
 
     @FXML
     private void initialize() {
@@ -25,7 +25,7 @@ public class ChessboardController {
 
     public void initializeChessboard() {
         int numColumns = 8;
-        int numRows = 9; // Exclut la rivière
+        int numRows = 9; // Sans la riviere
 
         for (int row = 0; row < numRows; row++) {
             for (int col = 0; col < numColumns; col++) {
@@ -38,19 +38,19 @@ public class ChessboardController {
                     square.setFill(Color.BLACK);
                 }
 
-                // Ajout d'une bordure
+                // Ajout d'une bordure des cases
                 square.setStroke(Color.BLACK);
 
                 StackPane squarePane = new StackPane(square);
 
-                // Désactiver les interactions de la souris avec le StackPane
+                // Désactiver les interactions de la souris avec le StackPane plus tard a changer pour jouer
                 squarePane.setMouseTransparent(true);
 
                 chessboardGrid.add(squarePane, col, row);
             }
         }
 
-        // Ajout de la rivière avec des cases bleues
+        // Ajout de la rivière avec des cases bleues (mettre des caracteres chinois dedans )
         for (int col = 0; col < numColumns; col++) {
             Rectangle riverSquare = new Rectangle(50, 50, Color.LIGHTBLUE);
             StackPane riverSquarePane = new StackPane(riverSquare);
@@ -60,7 +60,7 @@ public class ChessboardController {
     }
 
     private void displayImage() {
-        // Positionne les pièces dans la configuration de départ du camp rouge
+        // Positionne les pièces dans la configuration de départ du camp rouge mais mal
         // Chariots
         placePiece("/images/ChariotRed.png", 0, 0);
         placePiece("/images/ChariotRed.png", 7, 0);

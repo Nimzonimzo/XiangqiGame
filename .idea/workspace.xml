@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ChessboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChessboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Advisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Advisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Cannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cannon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Chariot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Chariot.java" afterDir="false" />
-    </list>
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Les pieces sont places en hauteur mais pas dans les angles..." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -154,7 +148,39 @@
       <option name="project" value="LOCAL" />
       <updated>1704893634657</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Les pieces sont places en hauteur mais pas dans les angles...">
+      <option name="closed" value="true" />
+      <created>1705000829276</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705000829276</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Les pieces sont places en hauteur mais pas dans les angles...">
+      <option name="closed" value="true" />
+      <created>1705000836170</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705000836170</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Les pieces sont places en hauteur mais pas dans les angles...">
+      <option name="closed" value="true" />
+      <created>1705000849827</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1705000849827</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Les pieces sont places en hauteur mais pas dans les angles...">
+      <option name="closed" value="true" />
+      <created>1705000862468</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1705000862468</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -168,7 +194,8 @@
     <MESSAGE value="La piece est presente mais mal places" />
     <MESSAGE value="Les pieces sont presentes ajoue Gridpan pour essayer de les placer dessus" />
     <MESSAGE value="Merge remote-tracking branch 'origin/nouvelle_branche_master' into nouvelle_branche_master&#10;&#10;# Conflicts:&#10;#&#9;src/controller/ChessboardController.java&#10;#&#9;src/view/Chessboard.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/nouvelle_branche_master' into nouvelle_branche_master&#10;&#10;# Conflicts:&#10;#&#9;src/controller/ChessboardController.java&#10;#&#9;src/view/Chessboard.fxml" />
+    <MESSAGE value="Les pieces sont places en hauteur mais pas dans les angles..." />
+    <option name="LAST_COMMIT_MESSAGE" value="Les pieces sont places en hauteur mais pas dans les angles..." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/XiangqiGame$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1704217739531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
