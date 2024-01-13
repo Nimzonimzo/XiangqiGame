@@ -111,7 +111,7 @@ public class ChessboardController {
         imageView.setFitWidth(50);
         imageView.setFitHeight(50);
 
-        // Ajustez les coordonnées pour placer les pièces dans les coins supérieurs gauche
+        // Ajustez les coordonnées pour placer les pièces dans les coins supérieurs gauche mais pos aujourdhui card Disney
         piecesGrid.add(piecePane, col, row);
         GridPane.setRowIndex(piecePane, row);
         GridPane.setColumnIndex(piecePane, col);
