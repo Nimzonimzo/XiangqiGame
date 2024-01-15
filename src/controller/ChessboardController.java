@@ -82,7 +82,7 @@ public class ChessboardController {
     }
 
     private void displayBlackPieces() {
-        // Positionne les pièces dans la configuration de départ du camp noir
+        // Positionne les pièces dans la configuration de départ du camp noir mais sur la premiere ligne
         // Chariots
         placePiece("/images/ChariotBlack.png", 0, 9);
         placePiece("/images/ChariotBlack.png", 7, 9);
