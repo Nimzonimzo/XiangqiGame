@@ -35,7 +35,7 @@ public class ChessboardController {
                 if ((row + col) % 2 == 0) {
                     square.setFill(Color.WHITE);
                 } else {
-                    square.setFill(Color.BLACK);
+                    square.setFill(Color.WHITE);
                 }
 
                 // Ajout d'une bordure des cases
