@@ -1,6 +1,9 @@
 package controller;
 
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
+import javafx.geometry.HPos;
+import javafx.geometry.VPos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -60,7 +63,7 @@ public class ChessboardController {
     }
 
     private void displayImage() {
-        // Positionne les pièces dans la configuration de départ du camp rouge mais mal
+        // Positionne les pièces dans la configuration de départ du camp rouge
         // Chariots
         placePiece("/images/ChariotRed.png", 0, 0);
         placePiece("/images/ChariotRed.png", 7, 0);
@@ -82,28 +85,26 @@ public class ChessboardController {
     }
 
     private void displayBlackPieces() {
-        // Positionne les pièces dans la configuration de départ du camp noir mais sur la premiere ligne
+        // Positionne les pièces dans la configuration de départ du camp noir
         // Chariots
-        placePiece("/images/ChariotBlack.png", 0, 9);
-        placePiece("/images/ChariotBlack.png", 7, 9);
+        placePiece("/images/ChariotBlack.png", 0, 8);
+        placePiece("/images/ChariotBlack.png", 7, 8);
 
         // Horses
-        placePiece("/images/HorseBlack.png", 1, 9);
-        placePiece("/images/HorseBlack.png", 6, 9);
+        placePiece("/images/HorseBlack.png", 1, 8);
+        placePiece("/images/HorseBlack.png", 6, 8);
 
         // Elephants
-        placePiece("/images/ElephantBlack.png", 2, 9);
-        placePiece("/images/ElephantBlack.png", 5, 9);
+        placePiece("/images/ElephantBlack.png", 2, 8);
+        placePiece("/images/ElephantBlack.png", 5, 8);
 
         // Advisors
-        placePiece("/images/AdvisorBlack.png", 3, 9);
-        placePiece("/images/AdvisorBlack.png", 4, 9);
+        placePiece("/images/AdvisorBlack.png", 3, 8);
+        placePiece("/images/AdvisorBlack.png", 4, 8);
 
         // General
-        placePiece("/images/GeneralBlack.png", 4, 8);
+        placePiece("/images/GeneralBlack.png", 4, 9);
     }
-
-
 
     private void placePiece(String imagePath, int col, int row) {
         ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream(imagePath)));
@@ -111,10 +112,11 @@ public class ChessboardController {
         imageView.setFitWidth(50);
         imageView.setFitHeight(50);
 
-        // Ajustez les coordonnées pour placer les pièces dans les coins supérieurs gauche mais ca marche pas
-        piecesGrid.add(piecePane, col, row);
-        GridPane.setRowIndex(piecePane, row);
-        GridPane.setColumnIndex(piecePane, col);
+        // Utilisez setAlignment pour placer les pièces dans les coins supérieurs gauche et supérieurs droit
+        chessboardGrid.add(piecePane, col, row);
+        GridPane.setHalignment(piecePane, col == 0 ? HPos.LEFT : HPos.RIGHT);
+        GridPane.setValignment(piecePane, VPos.TOP);
     }
+
 
 }
