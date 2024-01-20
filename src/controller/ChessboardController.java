@@ -1,8 +1,8 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.geometry.HPos;
+import javafx.geometry.Pos;
 import javafx.geometry.VPos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -17,7 +17,7 @@ public class ChessboardController {
     private GridPane chessboardGrid;
 
     @FXML
-    private GridPane piecesGrid;
+    private GridPane intersectionsGrid;
 
     @FXML
     private void initialize() {
@@ -29,6 +29,10 @@ public class ChessboardController {
     public void initializeChessboard() {
         int numColumns = 8;
         int numRows = 9; // Sans la riviere
+
+        // Créer une grille cachee pour les intersections
+        intersectionsGrid = new GridPane();
+        intersectionsGrid.setMouseTransparent(true);
 
         for (int row = 0; row < numRows; row++) {
             for (int col = 0; col < numColumns; col++) {
@@ -49,7 +53,7 @@ public class ChessboardController {
                 // Désactiver les interactions de la souris avec le StackPane plus tard a changer pour jouer
                 squarePane.setMouseTransparent(true);
 
-                chessboardGrid.add(squarePane, col, row);
+                intersectionsGrid.add(squarePane, col, row);
             }
         }
 
@@ -58,8 +62,11 @@ public class ChessboardController {
             Rectangle riverSquare = new Rectangle(50, 50, Color.LIGHTBLUE);
             StackPane riverSquarePane = new StackPane(riverSquare);
             riverSquarePane.setMouseTransparent(true);
-            chessboardGrid.add(riverSquarePane, col, numRows / 2);
+            intersectionsGrid.add(riverSquarePane, col, numRows / 2);
         }
+
+        // Ajouter la grille cachee au chessboardGrid
+        chessboardGrid.add(intersectionsGrid, 0, 0);
     }
 
     private void displayImage() {
@@ -112,11 +119,9 @@ public class ChessboardController {
         imageView.setFitWidth(50);
         imageView.setFitHeight(50);
 
-        // Utilisez setAlignment pour placer les pièces dans les coins supérieurs gauche et supérieurs droit
-        chessboardGrid.add(piecePane, col, row);
-        GridPane.setHalignment(piecePane, col == 0 ? HPos.LEFT : HPos.RIGHT);
-        GridPane.setValignment(piecePane, VPos.TOP);
+        // Utiliser setAlignment pour placer les pièces dans les intersections
+        GridPane.setHalignment(piecePane, HPos.CENTER);
+        GridPane.setValignment(piecePane, VPos.CENTER);
+        intersectionsGrid.add(piecePane, col, row);
     }
-
-
 }
