@@ -1,9 +1,7 @@
 package controller;
 
 import javafx.fxml.FXML;
-import javafx.geometry.HPos;
 import javafx.geometry.Pos;
-import javafx.geometry.VPos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
@@ -103,16 +101,17 @@ public class ChessboardController {
     }
 
     private void placePiece(String imagePath, int col, int row) {
-        ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream(imagePath)));
-        StackPane piecePane = new StackPane(imageView);
+        Image image = new Image(imagePath);
+        ImageView imageView = new ImageView(image);
         imageView.setFitWidth(50);
         imageView.setFitHeight(50);
 
-        // Utiliser setAlignment pour placer les pièces au centre des intersections
-        piecePane.setAlignment(Pos.CENTER);
+        double xOffset = (col * 50) - (imageView.getFitWidth() / 2);
+        double yOffset = (row * 50) - (imageView.getFitHeight() / 2);
 
-        // Ajuster l'offset pour centrer dans l'intersection plutôt que dans la case
-        chessboardGrid.add(piecePane, col, row, 1, 1);
+        imageView.setX(xOffset);
+        imageView.setY(yOffset);
+
+        chessboardGrid.getChildren().add(imageView);
     }
-
 }
