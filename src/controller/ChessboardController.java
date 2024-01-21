@@ -17,9 +17,6 @@ public class ChessboardController {
     private GridPane chessboardGrid;
 
     @FXML
-    private GridPane intersectionsGrid;
-
-    @FXML
     private void initialize() {
         initializeChessboard();
         displayImage();
@@ -30,15 +27,10 @@ public class ChessboardController {
         int numColumns = 8;
         int numRows = 9; // Sans la riviere
 
-        // Créer une grille cachee pour les intersections
-        intersectionsGrid = new GridPane();
-        intersectionsGrid.setMouseTransparent(true);
-
         for (int row = 0; row < numRows; row++) {
             for (int col = 0; col < numColumns; col++) {
                 Rectangle square = new Rectangle(50, 50);
 
-                // Couleur alternée pour les cases à modifier plus tard
                 if ((row + col) % 2 == 0) {
                     square.setFill(Color.WHITE);
                 } else {
@@ -50,23 +42,20 @@ public class ChessboardController {
 
                 StackPane squarePane = new StackPane(square);
 
-                // Désactiver les interactions de la souris avec le StackPane plus tard a changer pour jouer
+                // Désactiver les interactions de la souris avec le StackPane plus tard à changer pour jouer
                 squarePane.setMouseTransparent(true);
 
-                intersectionsGrid.add(squarePane, col, row);
+                chessboardGrid.add(squarePane, col, row);
             }
         }
 
-        // Ajout de la rivière avec des cases bleues (mettre des caracteres chinois dedans )
+        // Ajout de la rivière avec des cases bleues (mettre des caractères chinois dedans)
         for (int col = 0; col < numColumns; col++) {
             Rectangle riverSquare = new Rectangle(50, 50, Color.LIGHTBLUE);
             StackPane riverSquarePane = new StackPane(riverSquare);
             riverSquarePane.setMouseTransparent(true);
-            intersectionsGrid.add(riverSquarePane, col, numRows / 2);
+            chessboardGrid.add(riverSquarePane, col, numRows / 2);
         }
-
-        // Ajouter la grille cachee au chessboardGrid
-        chessboardGrid.add(intersectionsGrid, 0, 0);
     }
 
     private void displayImage() {
@@ -76,8 +65,8 @@ public class ChessboardController {
         placePiece("/images/ChariotRed.png", 7, 0);
 
         // Horses
-        placePiece("/images/HorseRed.png", 1, 0);
         placePiece("/images/HorseRed.png", 6, 0);
+        placePiece("/images/HorseRed.png", 1, 0);
 
         // Elephants
         placePiece("/images/ElephantRed.png", 2, 0);
@@ -119,9 +108,11 @@ public class ChessboardController {
         imageView.setFitWidth(50);
         imageView.setFitHeight(50);
 
-        // Utiliser setAlignment pour placer les pièces dans les intersections
-        GridPane.setHalignment(piecePane, HPos.CENTER);
-        GridPane.setValignment(piecePane, VPos.CENTER);
-        intersectionsGrid.add(piecePane, col, row);
+        // Utiliser setAlignment pour placer les pièces au centre des intersections
+        piecePane.setAlignment(Pos.CENTER);
+
+        // Ajuster l'offset pour centrer dans l'intersection plutôt que dans la case
+        chessboardGrid.add(piecePane, col, row, 1, 1);
     }
+
 }
