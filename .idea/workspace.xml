@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Grid Unique">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ChessboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChessboardController.java" afterDir="false" />
-    </list>
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Modifications avec cases" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -239,7 +236,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705873562853</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Ca avance ou pas">
+      <option name="closed" value="true" />
+      <created>1705940485202</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1705940485202</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Modifications avec cases">
+      <option name="closed" value="true" />
+      <created>1705940517036</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1705940517036</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -256,7 +269,11 @@
     <MESSAGE value="Les pieces sont places en hauteur mais pas dans les angles..." />
     <MESSAGE value="Un jour ca sera dans les angles" />
     <MESSAGE value="Grid Unique" />
-    <option name="LAST_COMMIT_MESSAGE" value="Grid Unique" />
+    <MESSAGE value="Modification Conseil" />
+    <MESSAGE value="Modification avec conseil pour cases" />
+    <MESSAGE value="Ca avance ou pas" />
+    <MESSAGE value="Modifications avec cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modifications avec cases" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/XiangqiGame$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1704217739531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
