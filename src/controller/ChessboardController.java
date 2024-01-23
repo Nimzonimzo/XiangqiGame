@@ -65,6 +65,8 @@ public class ChessboardController {
             intersectionsGrid.add(riverSquarePane, col, numRows / 2);
         }
 
+
+
         // Ajouter la grille cachee au chessboardGrid
         chessboardGrid.add(intersectionsGrid, 0, 0);
     }
@@ -120,8 +122,9 @@ public class ChessboardController {
         imageView.setFitHeight(50);
 
         // Utiliser setAlignment pour placer les pièces dans les intersections
-        GridPane.setHalignment(piecePane, HPos.CENTER);
-        GridPane.setValignment(piecePane, VPos.CENTER);
+        GridPane.setValignment(piecePane, VPos.BOTTOM);
+        GridPane.setHalignment(piecePane, HPos.LEFT);
+
         intersectionsGrid.add(piecePane, col, row);
     }
 }
