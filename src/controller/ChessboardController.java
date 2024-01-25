@@ -79,6 +79,10 @@ public class ChessboardController {
         placePiece("/images/HorseRed.png", 1, 0);
         placePiece("/images/HorseRed.png", 7, 0);
 
+        // Cannon
+        placePiece("/images/CannonRed.png", 1, 2);
+        placePiece("/images/CannonRed.png", 7, 2);
+
         // Elephants
         placePiece("/images/ElephantRed.png", 2, 0);
         placePiece("/images/ElephantRed.png", 6, 0);
@@ -91,41 +95,47 @@ public class ChessboardController {
         placePiece("/images/GeneralRed.png", 4, 0);
 
         // Soldier
-        placePiece("/images/SoldierRed.png", 0, 2);
-        placePiece("/images/SoldierRed.png", 2, 2);
-        placePiece("/images/SoldierRed.png", 4, 2);
-        placePiece("/images/SoldierRed.png", 6, 2);
-        placePiece("/images/SoldierRed.png", 8, 2);
+        placePiece("/images/SoldierRed.png", 0, 3);
+        placePiece("/images/SoldierRed.png", 2, 3);
+        placePiece("/images/SoldierRed.png", 4, 3);
+        placePiece("/images/SoldierRed.png", 6, 3);
+        placePiece("/images/SoldierRed.png", 8, 3);
 
     }
 
     private void displayBlackPieces() {
         // Positionne les pièces dans la configuration de départ du camp noir
         // Chariots
-        placePiece("/images/ChariotBlack.png", 0, 8);
-        placePiece("/images/ChariotBlack.png", 8, 8);
+        placePiece("/images/ChariotBlack.png", 0, 9);
+        placePiece("/images/ChariotBlack.png", 8, 9);
 
         // Horses
-        placePiece("/images/HorseBlack.png", 1, 8);
-        placePiece("/images/HorseBlack.png", 7, 8);
+        placePiece("/images/HorseBlack.png", 1, 9);
+        placePiece("/images/HorseBlack.png", 7, 9);
 
         // Elephants
-        placePiece("/images/ElephantBlack.png", 2, 8);
-        placePiece("/images/ElephantBlack.png", 6, 8);
+        placePiece("/images/ElephantBlack.png", 2, 9);
+        placePiece("/images/ElephantBlack.png", 6, 9);
 
         // Advisors
-        placePiece("/images/AdvisorBlack.png", 3, 8);
-        placePiece("/images/AdvisorBlack.png", 5, 8);
+        placePiece("/images/AdvisorBlack.png", 3, 9);
+        placePiece("/images/AdvisorBlack.png", 5, 9);
 
         // General
-        placePiece("/images/GeneralBlack.png", 4, 8);
+        placePiece("/images/GeneralBlack.png", 4, 9);
+
+        // Cannon
+        placePiece("/images/CannonBlack.png", 1, 7);
+        placePiece("/images/CannonBlack.png", 7, 7);
 
         // Soldier
-        placePiece("/images/SoldierBlack.png", 0, 5);
-        placePiece("/images/SoldierBlack.png", 2, 5);
-        placePiece("/images/SoldierBlack.png", 4, 5);
-        placePiece("/images/SoldierBlack.png", 6, 5);
-        placePiece("/images/SoldierBlack.png", 8, 5);
+        placePiece("/images/SoldierBlack.png", 0, 6);
+        placePiece("/images/SoldierBlack.png", 2, 6);
+        placePiece("/images/SoldierBlack.png", 4, 6);
+        placePiece("/images/SoldierBlack.png", 6, 6);
+        placePiece("/images/SoldierBlack.png", 8, 6);
+
+
     }
 
     private void placePiece(String imagePath, int col, int row) {
@@ -136,7 +146,7 @@ public class ChessboardController {
         StackPane piecePane = new StackPane(imageView);
         StackPane.setAlignment(imageView, Pos.BOTTOM_LEFT);
         imageView.setTranslateX(-imageView.getFitWidth() / 2); // Décaler horizontalement
-        imageView.setTranslateY(imageView.getFitHeight() / 2); // Décaler verticalement
+        imageView.setTranslateY(-imageView.getFitHeight() / 2); // Décaler verticalement
 
         GridPane.setValignment(piecePane, VPos.BOTTOM);
         GridPane.setHalignment(piecePane, HPos.LEFT);
