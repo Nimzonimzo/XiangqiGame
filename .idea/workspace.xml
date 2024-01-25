@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Les pieces rouges biens poses dans Test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ChessboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChessboardController.java" afterDir="false" />
-    </list>
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Toutes les pieces bien places" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -316,7 +313,39 @@
       <option name="project" value="LOCAL" />
       <updated>1706206736419</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Toutes les pieces bien places">
+      <option name="closed" value="true" />
+      <created>1706207366474</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1706207366474</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Toutes les pieces bien places">
+      <option name="closed" value="true" />
+      <created>1706207403417</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1706207403417</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Toutes les pieces bien places">
+      <option name="closed" value="true" />
+      <created>1706207501341</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1706207501341</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Toutes les pieces bien places">
+      <option name="closed" value="true" />
+      <created>1706207547794</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1706207547794</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,18 +379,8 @@
     <MESSAGE value="Modifications avec cases" />
     <MESSAGE value="Code avec la class Test qui fonctionne" />
     <MESSAGE value="Les pieces rouges biens poses dans Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Les pieces rouges biens poses dans Test" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/controller/Test.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Toutes les pieces bien places" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toutes les pieces bien places" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/XiangqiGame$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1704217739531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
