@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Code avec la class Test qui fonctionne">
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Les pieces rouges biens poses dans Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ChessboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ChessboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +58,7 @@
       <recent name="C:\Users\tomfe\Desktop\XiangqiGame\src\view" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.XiangqiGUI">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.Test" />
       <module name="XiangqiGame" />
@@ -315,7 +316,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706036585748</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Les pieces rouges biens poses dans Test">
+      <option name="closed" value="true" />
+      <created>1706132313364</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1706132313364</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Les pieces rouges biens poses dans Test">
+      <option name="closed" value="true" />
+      <created>1706132331234</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1706132331234</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -348,7 +365,8 @@
     <MESSAGE value="Ca avance ou pas" />
     <MESSAGE value="Modifications avec cases" />
     <MESSAGE value="Code avec la class Test qui fonctionne" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code avec la class Test qui fonctionne" />
+    <MESSAGE value="Les pieces rouges biens poses dans Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Les pieces rouges biens poses dans Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -20,7 +20,7 @@ public class Test extends Application {
     @Override
     public void start(Stage primaryStage) {
         GridPane chessboardGrid = createChessboard();
-        Scene scene = new Scene(chessboardGrid, 600, 600);
+        Scene scene = new Scene(chessboardGrid, 500, 500);
         primaryStage.setTitle("Chessboard Test");
         primaryStage.setScene(scene);
         primaryStage.show();
