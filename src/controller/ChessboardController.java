@@ -4,12 +4,22 @@ import javafx.fxml.FXML;
 import javafx.geometry.HPos;
 import javafx.geometry.Pos;
 import javafx.geometry.VPos;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import model.Chariot;
+import model.Horse;
+import model.Advisor;
+import model.Cannon;
+import model.Elephant;
+import model.General;
+import model.Soldier;
+
+
+
+import model.ChessPiece;
 
 public class ChessboardController {
 
@@ -22,15 +32,15 @@ public class ChessboardController {
     @FXML
     private void initialize() {
         initializeChessboard();
-        displayImage();
+        displayPieces();
         displayBlackPieces();
     }
 
     public void initializeChessboard() {
         int numColumns = 8;
-        int numRows = 9; // Sans la riviere
+        int numRows = 9; // Sans la rivière
 
-        // Créer une grille cachee pour les intersections
+        // Créer une grille cachée pour les intersections
         intersectionsGrid = new GridPane();
         intersectionsGrid.setMouseTransparent(true);
 
@@ -50,7 +60,7 @@ public class ChessboardController {
 
                 StackPane squarePane = new StackPane(square);
 
-                // Désactiver les interactions de la souris avec le StackPane plus tard a changer pour jouer
+                // Désactiver les interactions de la souris avec le StackPane plus tard à changer pour jouer
                 squarePane.setMouseTransparent(true);
 
                 intersectionsGrid.add(squarePane, col, row);
@@ -65,81 +75,113 @@ public class ChessboardController {
             intersectionsGrid.add(riverSquarePane, col, numRows / 2);
         }
 
-        // Ajouter la grille cachee au chessboardGrid
+        // Ajouter la grille cachée au chessboardGrid
         chessboardGrid.add(intersectionsGrid, 0, 0);
     }
 
-    private void displayImage() {
+    private void displayPieces() {
         // Positionne les pièces dans la configuration de départ du camp rouge
         // Chariots
-        placePiece("/images/ChariotRed.png", 0, 0);
-        placePiece("/images/ChariotRed.png", 8, 0);
+        ChessPiece chariot1R = new Chariot("/images/ChariotRed.png", "Chariot");
+        placePiece(chariot1R, 0, 9);
+        ChessPiece chariot2R = new Chariot("/images/ChariotRed.png", "Chariot");
+        placePiece(chariot2R, 8, 9);
 
         // Horses
-        placePiece("/images/HorseRed.png", 1, 0);
-        placePiece("/images/HorseRed.png", 7, 0);
+        ChessPiece horse1R = new Horse("/images/HorseRed.png", "Horse");
+        placePiece(horse1R, 1, 9);
+        ChessPiece horse2R = new Horse("/images/HorseRed.png", "Horse");
+        placePiece(horse2R, 7, 9);
 
-        // Cannon
-        placePiece("/images/CannonRed.png", 1, 2);
-        placePiece("/images/CannonRed.png", 7, 2);
+        // Cannons
+        ChessPiece cannon1R = new Cannon("/images/CannonRed.png", "Cannon");
+        placePiece(cannon1R, 1, 7);
+        ChessPiece cannon2R = new Cannon("/images/CannonRed.png", "Cannon");
+        placePiece(cannon2R, 7, 7);
 
         // Elephants
-        placePiece("/images/ElephantRed.png", 2, 0);
-        placePiece("/images/ElephantRed.png", 6, 0);
+        ChessPiece elephant1R = new Elephant("/images/ElephantRed.png", "Elephant");
+        placePiece(elephant1R, 2, 9);
+        ChessPiece elephant2R = new Elephant("/images/ElephantRed.png", "Elephant");
+        placePiece(elephant2R, 6, 9);
 
         // Advisors
-        placePiece("/images/AdvisorRed.png", 3, 0);
-        placePiece("/images/AdvisorRed.png", 5, 0);
+        ChessPiece advisor1R = new Advisor("/images/AdvisorRed.png", "Advisor");
+        placePiece(advisor1R, 3, 9);
+        ChessPiece advisor2R = new Advisor("/images/AdvisorRed.png", "Advisor");
+        placePiece(advisor2R, 5, 9);
 
         // General
-        placePiece("/images/GeneralRed.png", 4, 0);
+        ChessPiece general1R = new General("/images/GeneralRed.png", "General");
+        placePiece(general1R, 4, 9);
 
-        // Soldier
-        placePiece("/images/SoldierRed.png", 0, 3);
-        placePiece("/images/SoldierRed.png", 2, 3);
-        placePiece("/images/SoldierRed.png", 4, 3);
-        placePiece("/images/SoldierRed.png", 6, 3);
-        placePiece("/images/SoldierRed.png", 8, 3);
+        // Soldiers
+        ChessPiece soldier1R = new Soldier("/images/SoldierRed.png", "Soldier");
+        placePiece(soldier1R, 0, 6);
+        ChessPiece soldier2R = new Soldier("/images/SoldierRed.png", "Soldier");
+        placePiece(soldier2R, 2, 6);
+        ChessPiece soldier3R = new Soldier("/images/SoldierRed.png", "Soldier");
+        placePiece(soldier3R, 4, 6);
+        ChessPiece soldier4R = new Soldier("/images/SoldierRed.png", "Soldier");
+        placePiece(soldier4R, 6, 6);
+        ChessPiece soldier5R = new Soldier("/images/SoldierRed.png", "Soldier");
+        placePiece(soldier5R, 8, 6);
+
 
     }
 
     private void displayBlackPieces() {
         // Positionne les pièces dans la configuration de départ du camp noir
+
         // Chariots
-        placePiece("/images/ChariotBlack.png", 0, 9);
-        placePiece("/images/ChariotBlack.png", 8, 9);
+        ChessPiece chariot1B = new Chariot("/images/ChariotBlack.png", "Chariot");
+        placePiece(chariot1B, 0, 0);
+        ChessPiece chariot2B = new Chariot("/images/ChariotBlack.png", "Chariot");
+        placePiece(chariot2B, 8, 0);
 
         // Horses
-        placePiece("/images/HorseBlack.png", 1, 9);
-        placePiece("/images/HorseBlack.png", 7, 9);
+        ChessPiece horse1B = new Horse("/images/HorseBlack.png", "Horse");
+        placePiece(horse1B, 1, 0);
+        ChessPiece horse2B = new Horse("/images/HorseBlack.png", "Horse");
+        placePiece(horse2B, 7, 0);
+
+        // Cannons
+        ChessPiece cannon1B = new Cannon("/images/CannonBlack.png", "Cannon");
+        placePiece(cannon1B, 1, 2);
+        ChessPiece cannon2B = new Cannon("/images/CannonBlack.png", "Cannon");
+        placePiece(cannon2B, 7, 2);
 
         // Elephants
-        placePiece("/images/ElephantBlack.png", 2, 9);
-        placePiece("/images/ElephantBlack.png", 6, 9);
+        ChessPiece elephant1B = new Elephant("/images/ElephantBlack.png", "Elephant");
+        placePiece(elephant1B, 2, 0);
+        ChessPiece elephant2B = new Elephant("/images/ElephantBlack.png", "Elephant");
+        placePiece(elephant2B, 6, 0);
 
         // Advisors
-        placePiece("/images/AdvisorBlack.png", 3, 9);
-        placePiece("/images/AdvisorBlack.png", 5, 9);
+        ChessPiece advisor1B = new Advisor("/images/AdvisorBlack.png", "Advisor");
+        placePiece(advisor1B, 3, 0);
+        ChessPiece advisor2B = new Advisor("/images/AdvisorBlack.png", "Advisor");
+        placePiece(advisor2B, 5, 0);
 
         // General
-        placePiece("/images/GeneralBlack.png", 4, 9);
+        ChessPiece general1B = new General("/images/GeneralBlack.png", "General");
+        placePiece(general1B, 4, 0);
 
-        // Cannon
-        placePiece("/images/CannonBlack.png", 1, 7);
-        placePiece("/images/CannonBlack.png", 7, 7);
-
-        // Soldier
-        placePiece("/images/SoldierBlack.png", 0, 6);
-        placePiece("/images/SoldierBlack.png", 2, 6);
-        placePiece("/images/SoldierBlack.png", 4, 6);
-        placePiece("/images/SoldierBlack.png", 6, 6);
-        placePiece("/images/SoldierBlack.png", 8, 6);
-
-
+        // Soldiers
+        ChessPiece soldier1B = new Soldier("/images/SoldierBlack.png", "Soldier");
+        placePiece(soldier1B, 0, 3);
+        ChessPiece soldier2B = new Soldier("/images/SoldierBlack.png", "Soldier");
+        placePiece(soldier2B, 2, 3);
+        ChessPiece soldier3B = new Soldier("/images/SoldierBlack.png", "Soldier");
+        placePiece(soldier3B, 4, 3);
+        ChessPiece soldier4B = new Soldier("/images/SoldierBlack.png", "Soldier");
+        placePiece(soldier4B, 6, 3);
+        ChessPiece soldier5B = new Soldier("/images/SoldierBlack.png", "Soldier");
+        placePiece(soldier5B, 8, 3);
     }
 
-    private void placePiece(String imagePath, int col, int row) {
-        ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream(imagePath)));
+    private void placePiece(ChessPiece chessPiece, int col, int row) {
+        ImageView imageView = new ImageView(chessPiece.getPieceImage());
         imageView.setFitWidth(50); // Ajustez la taille au besoin
         imageView.setFitHeight(50);
 
@@ -151,8 +193,6 @@ public class ChessboardController {
         GridPane.setValignment(piecePane, VPos.BOTTOM);
         GridPane.setHalignment(piecePane, HPos.LEFT);
 
-        intersectionsGrid.add(piecePane, col, row );
-
+        intersectionsGrid.add(piecePane, col, row);
     }
-
 }
