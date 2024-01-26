@@ -9,17 +9,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import model.Chariot;
-import model.Horse;
-import model.Advisor;
-import model.Cannon;
-import model.Elephant;
-import model.General;
-import model.Soldier;
-
-
-
-import model.ChessPiece;
+import javafx.scene.input.MouseEvent;
+import model.*;
 
 public class ChessboardController {
 
@@ -28,6 +19,9 @@ public class ChessboardController {
 
     @FXML
     private GridPane intersectionsGrid;
+
+    private ChessPiece selectedPiece;
+    private double initialX, initialY;
 
     @FXML
     private void initialize() {
@@ -38,9 +32,8 @@ public class ChessboardController {
 
     public void initializeChessboard() {
         int numColumns = 8;
-        int numRows = 9; // Sans la rivière
+        int numRows = 9;
 
-        // Créer une grille cachée pour les intersections
         intersectionsGrid = new GridPane();
         intersectionsGrid.setMouseTransparent(true);
 
@@ -48,26 +41,21 @@ public class ChessboardController {
             for (int col = 0; col < numColumns; col++) {
                 Rectangle square = new Rectangle(50, 50);
 
-                // Couleur alternée pour les cases à modifier plus tard
                 if ((row + col) % 2 == 0) {
                     square.setFill(Color.WHITE);
                 } else {
                     square.setFill(Color.WHITE);
                 }
 
-                // Ajout d'une bordure des cases
                 square.setStroke(Color.BLACK);
 
                 StackPane squarePane = new StackPane(square);
-
-                // Désactiver les interactions de la souris avec le StackPane plus tard à changer pour jouer
                 squarePane.setMouseTransparent(true);
 
                 intersectionsGrid.add(squarePane, col, row);
             }
         }
 
-        // Ajout de la rivière avec des cases bleues (mettre des caractères chinois dedans)
         for (int col = 0; col < numColumns; col++) {
             Rectangle riverSquare = new Rectangle(50, 50, Color.LIGHTBLUE);
             StackPane riverSquarePane = new StackPane(riverSquare);
@@ -75,7 +63,6 @@ public class ChessboardController {
             intersectionsGrid.add(riverSquarePane, col, numRows / 2);
         }
 
-        // Ajouter la grille cachée au chessboardGrid
         chessboardGrid.add(intersectionsGrid, 0, 0);
     }
 
@@ -126,8 +113,6 @@ public class ChessboardController {
         placePiece(soldier4R, 6, 6);
         ChessPiece soldier5R = new Soldier("/images/SoldierRed.png", "Soldier");
         placePiece(soldier5R, 8, 6);
-
-
     }
 
     private void displayBlackPieces() {
@@ -182,16 +167,45 @@ public class ChessboardController {
 
     private void placePiece(ChessPiece chessPiece, int col, int row) {
         ImageView imageView = new ImageView(chessPiece.getPieceImage());
-        imageView.setFitWidth(50); // Ajustez la taille au besoin
+        imageView.setFitWidth(50);
         imageView.setFitHeight(50);
 
         StackPane piecePane = new StackPane(imageView);
         StackPane.setAlignment(imageView, Pos.BOTTOM_LEFT);
-        imageView.setTranslateX(-imageView.getFitWidth() / 2); // Décaler horizontalement
-        imageView.setTranslateY(-imageView.getFitHeight() / 2); // Décaler verticalement
+        imageView.setTranslateX(-imageView.getFitWidth() / 2);
+        imageView.setTranslateY(-imageView.getFitHeight() / 2);
 
         GridPane.setValignment(piecePane, VPos.BOTTOM);
         GridPane.setHalignment(piecePane, HPos.LEFT);
+
+        piecePane.setOnMousePressed(event -> {
+            initialX = event.getSceneX();
+            initialY = event.getSceneY();
+            selectedPiece = chessPiece;
+        });
+
+        piecePane.setOnMouseDragged(event -> {
+            double dragX = event.getSceneX() - initialX;
+            double dragY = event.getSceneY() - initialY;
+            piecePane.setTranslateX(dragX);
+            piecePane.setTranslateY(dragY);
+        });
+
+        piecePane.setOnMouseReleased(event -> {
+            // Reset selection
+            selectedPiece = null;
+
+            // Update piece position in the grid
+            int newCol = (int) (event.getSceneX() / 50);
+            int newRow = (int) (event.getSceneY() / 50);
+
+            GridPane.setColumnIndex(piecePane, newCol);
+            GridPane.setRowIndex(piecePane, newRow);
+
+            // Reset piece translation
+            piecePane.setTranslateX(0);
+            piecePane.setTranslateY(0);
+        });
 
         intersectionsGrid.add(piecePane, col, row);
     }
