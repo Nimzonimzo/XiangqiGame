@@ -9,15 +9,15 @@ public class Horse extends ChessPiece {
         super("/images/Horse" + color + ".png", "Horse");
     }
 
-    // Ajoutez ce constructeur par défaut
     public Horse() {
-        super(); // Vous pouvez ajouter des valeurs par défaut si nécessaire
+        super();
     }
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Implémentez la logique des mouvements valides pour le cheval
-        // (vous devrez ajuster cela en fonction des règles du Xiangqi)
-        return true;
+        // Logique de mouvement du cheval
+        int rowDiff = Math.abs(targetRow - sourceRow);
+        int colDiff = Math.abs(targetCol - sourceCol);
+        return (rowDiff == 2 && colDiff == 1) || (rowDiff == 1 && colDiff == 2);
     }
 }

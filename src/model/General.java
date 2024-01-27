@@ -9,15 +9,13 @@ public class General extends ChessPiece {
         super("/images/General" + color + ".png", "General");
     }
 
-    // Ajoutez ce constructeur par défaut
     public General() {
-        super(); // Vous pouvez ajouter des valeurs par défaut si nécessaire
+        super();
     }
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Implémentez la logique des mouvements valides pour le general
-        // (vous devrez ajuster cela en fonction des règles du Xiangqi)
-        return true;
+        // Logique de mouvement du général
+        return Math.abs(targetRow - sourceRow) + Math.abs(targetCol - sourceCol) == 1;
     }
 }

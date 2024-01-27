@@ -9,15 +9,13 @@ public class Cannon extends ChessPiece {
         super("/images/Cannon" + color + ".png", "Cannon");
     }
 
-    // Ajoutez ce constructeur par défaut
     public Cannon() {
-        super(); // Vous pouvez ajouter des valeurs par défaut si nécessaire
+        super();
     }
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Implémentez la logique des mouvements valides pour le cannon
-        // (vous devrez ajuster cela en fonction des règles du Xiangqi)
-        return true;
+        // Logique de mouvement du cannon
+        return sourceRow == targetRow || sourceCol == targetCol;
     }
 }

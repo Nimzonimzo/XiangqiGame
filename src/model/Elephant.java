@@ -9,15 +9,15 @@ public class Elephant extends ChessPiece {
         super("/images/Elephant" + color + ".png", "Elephant");
     }
 
-    // Ajoutez ce constructeur par défaut
     public Elephant() {
-        super(); // Vous pouvez ajouter des valeurs par défaut si nécessaire
+        super();
     }
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Implémentez la logique des mouvements valides pour l'éléphant
-        // (vous devrez ajuster cela en fonction des règles du Xiangqi)
-        return true;
+        // Logique de mouvement de l'éléphant
+        int rowDiff = Math.abs(targetRow - sourceRow);
+        int colDiff = Math.abs(targetCol - sourceCol);
+        return rowDiff == 2 && colDiff == 2;
     }
 }
