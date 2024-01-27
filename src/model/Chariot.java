@@ -9,19 +9,13 @@ public class Chariot extends ChessPiece {
         super("/images/Chariot" + color + ".png", "Chariot");
     }
 
-    // Ajoutez ce constructeur par défaut
     public Chariot() {
-        super("/images/ChariotRed.png", "Chariot");
+        super();
     }
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Mouvement valide pour le Chariot : se déplace en ligne droite
-        if (sourceRow == targetRow || sourceCol == targetCol) {
-            // Déplacement en ligne droite
-            return true;
-        }
-
-        return false;
+        // Logique de mouvement du chariot
+        return sourceRow == targetRow || sourceCol == targetCol;
     }
 }

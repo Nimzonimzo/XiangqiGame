@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="deplacement des pieces" />
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="deplacement des pieces">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Advisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Advisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cannon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cannon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Chariot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Chariot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Elephant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Elephant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/General.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/General.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Horse.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -9,17 +9,13 @@ public class Advisor extends ChessPiece {
         super("/images/Advisor" + color + ".png", "Advisor");
     }
 
-    // Ajoutez ce constructeur par défaut
     public Advisor() {
-        super("/images/AdvisorRed.png", "Advisor");
+        super();
     }
 
     @Override
     public boolean isValidMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
-        // Mouvement valide pour l'Advisor : déplacement en diagonale dans la zone du palais
-        int rowDiff = Math.abs(targetRow - sourceRow);
-        int colDiff = Math.abs(targetCol - sourceCol);
-
-        return (rowDiff == 1 && colDiff == 1); // Déplacement en diagonale d'une case
+        // Logique de mouvement de l'advisor
+        return Math.abs(targetRow - sourceRow) == 1 && Math.abs(targetCol - sourceCol) == 1;
     }
 }
