@@ -11,7 +11,7 @@ This project focuses on creating a digital version of XiangQi, also known as Chi
 3. **Piece Movement:** Develop functionality for players to easily move chess pieces according to the rules of XiangQi.
 4. **Player vs. Player:** Enable multiplayer functionality for players to engage in matches with friends.
 5. **AI Opponent (Optional):** Explore the possibility of implementing an AI opponent for single-player mode.
-6.**Add features  (Optional):**
+6.**Add features (Optional):**
 Make different features like clock or scores.
 
 ## Technologies Used
