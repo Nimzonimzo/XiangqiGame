@@ -17,7 +17,7 @@ public class XiangqiGUI extends Application {
         ChessboardController controller = loader.getController();
 
         primaryStage.setScene(new Scene(root, 400, 400));
-        primaryStage.setTitle("Xiangqi Game de Nimzo");
+        primaryStage.setTitle("Xiangqi Game of Nimzo");
         primaryStage.show();
     }
 
