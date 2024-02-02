@@ -66,6 +66,8 @@ public class ChessboardController {
         chessboardGrid.add(intersectionsGrid, 0, 0);
     }
 
+
+
     private void displayPieces() {
         // Positionne les pièces dans la configuration de départ du camp rouge
         // Chariots
