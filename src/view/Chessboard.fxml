@@ -10,7 +10,7 @@
 
     <GridPane fx:id="chessboardGrid" alignment="CENTER" hgap="1" vgap="1"/>
 
-    <!-- Nouveau GridPane pour les pièces -->
+    <!-- Utiliser le GridPane pour les pièces -->
     <GridPane fx:id="piecesGrid" alignment="CENTER" hgap="1" vgap="1"/>
 
 </GridPane>
