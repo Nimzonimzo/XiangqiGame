@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="setOnMouseReleased j'essaye" />
+    <list default="true" id="aff25bac-333f-4026-91bd-d929f50601ec" name="Changes" comment="Les classes Pieces à Jour">
+        <change beforePath="$PROJECT_DIR$/src/view/Chessboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Chessboard.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
+</component>
+
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
