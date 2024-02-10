@@ -201,22 +201,13 @@ public class ChessboardController {
             int newCol = (int) (event.getSceneX() / 50);
             int newRow = (int) (event.getSceneY() / 50);
 
-            // Ajouter des conditions pour s'assurer que la nouvelle position est dans les limites de la grille
-            if (newCol >= 0 && newCol < 8 && newRow >= 0 && newRow < 9) {
-                // Vérifier si la nouvelle position est libre avant de déplacer la pièce
-                if (intersectionsGrid.getChildren().stream().noneMatch(
-                        node -> GridPane.getColumnIndex(node) == newCol && GridPane.getRowIndex(node) == newRow)) {
-
-                    GridPane.setColumnIndex(piecePane, newCol);
-                    GridPane.setRowIndex(piecePane, newRow);
-                }
-            }
+            GridPane.setColumnIndex(piecePane, newCol);
+            GridPane.setRowIndex(piecePane, newRow);
 
             // Reset piece translation
             piecePane.setTranslateX(0);
             piecePane.setTranslateY(0);
         });
-
 
         intersectionsGrid.add(piecePane, col, row);
     }
