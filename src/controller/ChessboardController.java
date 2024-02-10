@@ -189,32 +189,31 @@ public class ChessboardController {
         piecePane.setOnMouseDragged(event -> {
             double dragX = event.getSceneX() - initialX;
             double dragY = event.getSceneY() - initialY;
-            piecePane.setTranslateX(dragX);
-            piecePane.setTranslateY(dragY);
+
+            // Calcul des nouveaux indices de colonne et de ligne en fonction de la position de la souris
+            int newCol = (int) ((event.getSceneX() - chessboardGrid.layoutXProperty().get()) / 50);
+            int newRow = (int) ((event.getSceneY() - chessboardGrid.layoutYProperty().get()) / 50);
+
+            // Mettre à jour les indices de colonne et de ligne de la pièce dans la grille
+            GridPane.setColumnIndex(piecePane, newCol);
+            GridPane.setRowIndex(piecePane, newRow);
         });
+
 
         piecePane.setOnMouseReleased(event -> {
             // Reset selection
             selectedPiece = null;
 
-            // Update piece position in the grid
-            int newCol = (int) (event.getSceneX() / 50);
-            int newRow = (int) (event.getSceneY() / 50);
+            // Mettez à jour les indices de colonne et de ligne de la pièce dans la grille
+            int newCol = (int) ((event.getSceneX() - chessboardGrid.layoutXProperty().get()) / 50);
+            int newRow = (int) ((event.getSceneY() - chessboardGrid.layoutYProperty().get()) / 50);
 
-            // Ajouter des conditions pour s'assurer que la nouvelle position est dans les limites de la grille
-            if (newCol >= 0 && newCol < 8 && newRow >= 0 && newRow < 9) {
-                // Vérifier si la nouvelle position est libre avant de déplacer la pièce
-                if (intersectionsGrid.getChildren().stream().noneMatch(
-                        node -> GridPane.getColumnIndex(node) == newCol && GridPane.getRowIndex(node) == newRow)) {
+            GridPane.setColumnIndex(piecePane, newCol);
+            GridPane.setRowIndex(piecePane, newRow);
 
-                    GridPane.setColumnIndex(piecePane, newCol);
-                    GridPane.setRowIndex(piecePane, newRow);
-                }
-            }
-
-            // Reset piece translation
-            piecePane.setTranslateX(0);
-            piecePane.setTranslateY(0);
+            // Réorganisez la pièce dans la grille
+            intersectionsGrid.getChildren().remove(piecePane);  // Supprimez d'abord la pièce
+            intersectionsGrid.add(piecePane, newCol, newRow);   // Ajoutez la pièce à la nouvelle position
         });
 
 
