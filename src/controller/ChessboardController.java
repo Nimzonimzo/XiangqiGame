@@ -185,7 +185,7 @@ public class ChessboardController {
             initialY = event.getSceneY();
             selectedPiece = chessPiece;
         });
-
+        // Partie pour deplacement des pieces
         piecePane.setOnMouseDragged(event -> {
             double dragX = event.getSceneX() - initialX;
             double dragY = event.getSceneY() - initialY;
